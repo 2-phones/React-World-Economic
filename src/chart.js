@@ -1,6 +1,5 @@
 import React from "react";
-import "./App.css";
-import { data } from "./data";
+import { data,datas } from "./data";
 import { ChartStyle } from "./style";
 import {
   PieChart,
@@ -14,16 +13,33 @@ import {
   Bar,
 } from "recharts";
 
-const Chart = () => {
+const Chart = ({countryInfo}) => {
+  const {country_eng_nm, gdp, gdp_per_capita ,import_amount, export_amount} = countryInfo
+  const data1 = [
+    {name : '총 GDP' , values : gdp/100000000},
+    {name : '1인당 GDP' , values : Number(gdp_per_capita)},
+    {name : '총 수출액' , values :export_amount/10000000},
+    {name : '총 수입액' , values : import_amount/10000000},
+  ]
+ 
+  const data2 = [
+    {name : '총 GDP' , values : 0},
+    {name : '1인당 GDP' , values : 0},
+    {name : '총 수출액' , values : 0 },
+    {name : '총 수입액' , values : 0},
+]
+
+  console.log(data1)
+
   return (
     <contanier>
         <ChartStyle>
-        <h1>World Economic Situation</h1>
+        <h1>{country_eng_nm}</h1>
             <div className="chartBar">
             <BarChart
             width={500}
             height={300}
-            data={data}
+            data={data1}
             barSize={20}
             >
             <XAxis
