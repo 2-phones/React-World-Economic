@@ -36,6 +36,7 @@ const ButtonStyle = styled.div`
     border: 1px solid #Ffffff ;
     border-radius: 5px;
     box-shadow: 1px 1px 3px 3px #999;
+    cursor: pointer;
     }
     .countryModal{
     list-style : none;

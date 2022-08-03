@@ -21,6 +21,7 @@ function App() {
 export const Main = () => {
 const [ countryInfo , setCountryInfo ] = useState('');
 const [dropDownValue , setDropDownValue] = useState('선택해보셈');
+const [isClick , setIsClick]  = useState(false);
 
   const serachValue = (e) => {
     const data = e.target.value;
@@ -50,8 +51,11 @@ const [dropDownValue , setDropDownValue] = useState('선택해보셈');
           placeholder="Serach.."
           />
           <ButtonStyle>
-          <div className="dropDown">{dropDownValue} ▾</div>
-          <div className="countryModal"> {countryName.map( li => <li>{li.name}</li>)} </div>
+          <div 
+          className="dropDown" 
+          onClick={ () => setIsClick(!isClick) }>
+            {dropDownValue} ▾</div>
+          {isClick ? <div className="countryModal"> {countryName.map( li => <li>{li.name}</li>)} </div> : null }
           </ButtonStyle>
           <Chart countryInfo={countryInfo}/>
         </Background>
