@@ -20,6 +20,7 @@ function App() {
 
 export const Main = () => {
 const [ countryInfo , setCountryInfo ] = useState('');
+const [dropDownValue , setDropDownValue] = useState('선택해보셈');
 
   const serachValue = (e) => {
     const data = e.target.value;
@@ -35,10 +36,6 @@ const [ countryInfo , setCountryInfo ] = useState('');
       .catch( err => console.log(err) )
     } 
 
-  
-      
-
-
     
   }
   return(
@@ -53,7 +50,7 @@ const [ countryInfo , setCountryInfo ] = useState('');
           placeholder="Serach.."
           />
           <ButtonStyle>
-          <div className="dropDown">버튼임 ▾</div>
+          <div className="dropDown">{dropDownValue} ▾</div>
           <div className="countryModal"> {countryName.map( li => <li>{li.name}</li>)} </div>
           </ButtonStyle>
           <Chart countryInfo={countryInfo}/>

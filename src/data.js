@@ -45,10 +45,35 @@ const countryName = [
   name : "영국"
 },
   {
-  country_nm : "프랑스",
-  name : "프랑스"
+  country_nm : "독일",
+  name : "독일"
 },
-]
+{
+  country_nm : "중국",
+  name : "중국"
+},
+{
+  country_nm : "가나",
+  name : "가나"
+},
+{
+  country_nm : "이탈리아",
+  name : "이탈리아"
+},
+{
+  country_nm : "네덜란드",
+  name : "네덜란드"
+},
+].sort( (a,b) => { // ㄱ-ㅎ 정렬
+  var nameA = a.name.toUpperCase(); 
+  var nameB = b.name.toUpperCase(); 
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+});
 
 const user = [
   {
