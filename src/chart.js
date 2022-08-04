@@ -13,7 +13,7 @@ import {
   Bar,
 } from "recharts";
 
-const Chart = ({countryInfo}) => {
+const Chart = ({countryInfo,setDropDownValue}) => {
   const {country_eng_nm, gdp, gdp_per_capita ,import_amount, export_amount} = countryInfo
   const data1 = [
     {name : '총 GDP' , values : gdp/100000000},

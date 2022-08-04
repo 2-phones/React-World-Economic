@@ -46,9 +46,14 @@ const ButtonStyle = styled.div`
     border: 1px solid #Ffffff ;
     border-radius: 5px;
     box-shadow: 1px 1px 3px 3px #999;
+    
     }
     li {
         padding : 10px;
+        cursor: pointer;
+    }
+    li:hover {
+        background-color: lightgray;
     }
 `
 const Conutrymodal = styled.div`

@@ -12,6 +12,7 @@ import { countryName } from "./data";
 function App() {
   return (
       <>
+      console.log(React)
         <Main />
       </>
   )
@@ -39,6 +40,10 @@ const [isClick , setIsClick]  = useState(false);
 
     
   }
+  const dropDownChooes = (e) => {
+    setDropDownValue(e.target.textContent);
+  }
+
   return(
         <>
         <Header/>
@@ -55,9 +60,9 @@ const [isClick , setIsClick]  = useState(false);
           className="dropDown" 
           onClick={ () => setIsClick(!isClick) }>
             {dropDownValue} ▾</div>
-          {isClick ? <div className="countryModal"> {countryName.map( li => <li>{li.name}</li>)} </div> : null }
-          </ButtonStyle>
-          <Chart countryInfo={countryInfo}/>
+          {isClick ? <div className="countryModal" onClick={dropDownChooes} > {countryName.map( li => <li>{li.name}</li>)} </div> : null }
+          </ButtonStyle>₩
+          <Chart countryInfo={countryInfo} setDropDownValue={setDropDownValue}/>
         </Background>
         </>
   )
