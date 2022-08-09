@@ -29,8 +29,6 @@ const Chart = ({countryInfo,setDropDownValue}) => {
     {name : '총 수입액' , values : 0},
 ]
 
-  console.log(data1)
-
   return (
     <contanier>
         <ChartStyle>

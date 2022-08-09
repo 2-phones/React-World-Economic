@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SerachStyle = styled.input`
 
-width : 300px;
+width : 190px;
 height : 30px;
 border : 3px solid lightgray;
 box-shadow : 1px 1px 3px gray;
@@ -25,7 +25,7 @@ const ChartStyle = styled.div`
     margin-top : 250px;
 `
 
-const ButtonStyle = styled.div`
+const DropDownStyle = styled.div`
     .dropDown{
     display:flex;
     justify-content:space-around;
@@ -39,6 +39,8 @@ const ButtonStyle = styled.div`
     cursor: pointer;
     }
     .countryModal{
+    /* display: flex;
+    flex-direction : column; */
     list-style : none;
     width :  350px;
     height: 250px;
@@ -46,18 +48,32 @@ const ButtonStyle = styled.div`
     border: 1px solid #Ffffff ;
     border-radius: 5px;
     box-shadow: 1px 1px 3px 3px #999;
+    overflow: auto;
+
     
     }
     li {
         padding : 10px;
         cursor: pointer;
+
     }
     li:hover {
         background-color: lightgray;
     }
+
+    
 `
-const Conutrymodal = styled.div`
-   
+const SelectStyle = styled.div`
+    .fruits_select{
+        width : 150px;
+        margin : 25px;
+        height  : 20px;
+    }
+    option {
+        width : 450px;
+        height : 30px;
+    }
 `
 
-export {SerachStyle,Background,ChartStyle,ButtonStyle,Conutrymodal}
+
+export {SerachStyle,Background,ChartStyle,DropDownStyle,SelectStyle}
